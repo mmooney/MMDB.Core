@@ -117,13 +117,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DBBuild\DBBuildException.cs" />
-    <Compile Include="DBBuild\DBBuildHelper.cs" />
-    <Compile Include="DBBuild\DBHelper.cs" />
-    <Compile Include="DBBuild\DBScriptHelper.cs" />
-    <Compile Include="DBBuild\KeyValueItem.cs" />
-    <Compile Include="DBBuild\ScriptingExceptions.cs" />
-    <Compile Include="DBBuild\SeedDataItem.cs" />
     <Compile Include="EnumProcedureType.cs" />
     <Compile Include="MMDBApplication.cs" />
     <Compile Include="MMDBData.cs" />
