@@ -53,6 +53,7 @@ namespace MMDB.Core
             le.Severity = System.Diagnostics.TraceEventType.Information;
             le.ProcessName = ProcessName;
             Logger.Write(le);
+            
         }
 
         public static void View(string logfile)
