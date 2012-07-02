@@ -71,9 +71,9 @@ namespace MMDB.Core
                 message.CC.Add(CC);
                 message.Bcc.Add(BCC);
 				client.Host = _SMTPServer;
-				NetworkCredential credential = new NetworkCredential(_SMTPUsername,_SMTPPassword);
-				credential.GetCredential(client.Host, Port, AuthenticationType);
-				client.UseDefaultCredentials = false;
+                client.UseDefaultCredentials = false;
+                NetworkCredential credential = new NetworkCredential(_SMTPUsername, _SMTPPassword);
+                credential.GetCredential(client.Host, Port, AuthenticationType);
 				client.Credentials = credential;
                 message.ReplyTo = message.From;
 				try 

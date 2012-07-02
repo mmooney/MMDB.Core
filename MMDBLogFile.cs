@@ -5,6 +5,7 @@ using System.Text;
 using Microsoft.Practices.EnterpriseLibrary.Logging;
 using Microsoft.Practices.EnterpriseLibrary.Logging.Filters;
 using Microsoft.Practices.EnterpriseLibrary.Logging.ExtraInformation;
+using System.IO;
 
 namespace MMDB.Core
 {
@@ -56,7 +57,10 @@ namespace MMDB.Core
 
         public static void View(string logfile)
         {
+            if (File.Exists(logfile))
+            {
                         System.Diagnostics.Process.Start(logfile);
+            }
         }
     }
 }
