@@ -47,7 +47,7 @@ namespace MMDB.Core.ExtensionMethods
                 d.Add(gvr.Cells[0].ToString(), gvr.Cells[1].ToString());
             }
             return d;
-            
+
         }
         public static DataTable ToDataTable(this DataGridView gv)
         {
@@ -57,7 +57,7 @@ namespace MMDB.Core.ExtensionMethods
                 dt.Columns.Add(gv.Columns[j].Name);
             }
 
-            for (int i = 0; i < gv.Rows.Count-1;i++)
+            for (int i = 0; i < gv.Rows.Count - 1; i++)
             {
                 DataGridViewRow gvr = gv.Rows[i];
                 DataRow dr = dt.NewRow();
@@ -79,7 +79,7 @@ namespace MMDB.Core.ExtensionMethods
             foreach (var propinfo in elementType.GetProperties())
             {
                 dt.Columns.Add(propinfo.Name);
-//                dt.Columns.Add(propinfo.Name, propinfo.PropertyType);
+                //                dt.Columns.Add(propinfo.Name, propinfo.PropertyType);
             }
 
             foreach (T item in list)
@@ -100,7 +100,7 @@ namespace MMDB.Core.ExtensionMethods
         }
         public static void Add(this StringCollection sc, StringCollection sc1)
         {
-            foreach(string s in sc1)
+            foreach (string s in sc1)
             {
                 sc.Add(s);
             }
@@ -111,9 +111,9 @@ namespace MMDB.Core.ExtensionMethods
             StringCollection returncollection = new StringCollection();
             foreach (string s in sc)
             {
-                
-                if (Count > End){ break; }
-                if (Count >= Start){ returncollection.Add(s); }
+
+                if (Count > End) { break; }
+                if (Count >= Start) { returncollection.Add(s); }
 
                 Count++;
             }
@@ -157,7 +157,6 @@ namespace MMDB.Core.ExtensionMethods
             }
             return table;
         }
-
         private static DataTable CreateTable<T>()
         {
             Type entityType = typeof(T);
