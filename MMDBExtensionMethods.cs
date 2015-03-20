@@ -64,7 +64,7 @@ namespace MMDB.Core.ExtensionMethods
                 DataRow dr = dt.NewRow();
                 for (int j = 0; j < gv.Columns.Count; j++)
                 {
-                    dr[j] = gvr.Cells[j].Value;
+                    dr[j] = gvr.Cells[j].Value ?? String.Empty;
                 }
                 dt.Rows.Add(dr);
             }
